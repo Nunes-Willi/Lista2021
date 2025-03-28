@@ -111,65 +111,73 @@ def celsius_para_fahrenheit(celsius):
     Retorna:
         float: a temperatura em graus Farenheit.
     """
+    return (celsius * 9/5 ) + 32
 
 
-# def fahrenheit_para_celsius(farenheit):
-#     """Recebe uma temperatura em graus Fahrenheit, e retorna a temperatura
-#         em graus Celsius.
+def fahrenheit_para_celsius(farenheit):
+    """Recebe uma temperatura em graus Fahrenheit, e retorna a temperatura
+        em graus Celsius.
 
-#     Argumento:
-#         farenheit (float): a temperatura em graus Fahrenheit.
+    Argumento:
+        farenheit (float): a temperatura em graus Fahrenheit.
 
-#     Retorna:
-#         float: a temperatura em graus Celsius.
-#     """
+    Retorna:
+        float: a temperatura em graus Celsius.
+    """
+    return round((farenheit - 32) * 5/9, 2)
 
+def preco_aluguel_carro(dias, km):
+    """Recebe uma quantidade de dias que o carro foi alugado e a
+        quantidade de quilômetros rodados, e retorna o valor a ser pago.
+        1 dia: 60 reais mais R$ 0,15 por km rodado.
 
-# def preco_aluguel_carro(dias, km):
-#     """Recebe uma quantidade de dias que o carro foi alugado e a
-#         quantidade de quilômetros rodados, e retorna o valor a ser pago.
-#         1 dia: 60 reais mais R$ 0,15 por km rodado.
+    Argumentos:
+        dias (int): quantidade de dias que o carro foi alugado.
+        km (float): quantos quilômetros o carro rodou.
 
-#     Argumentos:
-#         dias (int): quantidade de dias que o carro foi alugado.
-#         km (float): quantos quilômetros o carro rodou.
+    Retorna:
+        float: o preço do aluguel do carro, com 2 casas decimais,
+                conforme a fórmula dada no enunciado.
+     """
 
-#     Retorna:
-#         float: o preço do aluguel do carro, com 2 casas decimais,
-#                 conforme a fórmula dada no enunciado.
-#     """
+    return round((dias * 60) + (km * 0.15), 2)
 
+def dias_perdidos_por_fumar(cigarros_fumados_por_dia, anos_fumando):
+    """Recebe uma quantidade de cigarros fumados por dia e a quantidade
+        de anos que fuma, e retorna o total de dias perdidos, sabendo que
+        cada cigarro reduz a vida em 10 minutos.
 
-# def dias_perdidos_por_fumar(cigarros_fumados_por_dia, anos_fumando):
-#     """Recebe uma quantidade de cigarros fumados por dia e a quantidade
-#         de anos que fuma, e retorna o total de dias perdidos, sabendo que
-#         cada cigarro reduz a vida em 10 minutos.
+    Argumentos:
+        cigarros_fumados_por_dia (int): a quantidade de cigarros fumados por dia.
+        anos_fumando (int): a quantidade de anos que a pessoa fumou.
 
-#     Argumentos:
-#         cigarros_fumados_por_dia (int): a quantidade de cigarros fumados por dia.
-#         anos_fumando (int): a quantidade de anos que a pessoa fumou.
+    Retorna:
+        int: a quantidade de dias que a pessoa perdeu por fumar.
+    """
+    totalCigarros = cigarros_fumados_por_dia * anos_fumando * 365
+    minutosPerdidos = totalCigarros * 10
+    diasPerdidos = minutosPerdidos / 60 / 24
 
-#     Retorna:
-#         int: a quantidade de dias que a pessoa perdeu por fumar.
-#     """
+    return int(diasPerdidos)
 
+def dois_elevado_a_dez_mil():
+    """Calcula dois elevado a dez mil, e retorna a quantidade de
+    algarismos.
 
-# def dois_elevado_a_dez_mil():
-#     """Calcula dois elevado a dez mil, e retorna a quantidade de
-#     algarismos.
+    Retorna:
+        int: a quantidade de algarismos que o resultado contém.
+    """
+    # doisDezMil = 2 ** 10000
+    # algarismos = len( str(doisDezMil))
+    return len(str(2 ** 10000))
 
-#     Retorna:
-#         int: a quantidade de algarismos que o resultado contém.
-#     """
-
-
-# def media_final_aprovado_reprovado(p1, p2, ep1, ep2):
-#     """Recebe as notas das 2 provas e 2 exercícios de programação e retorna
-#         se o aluno foi ou não aprovado. As provas têm peso 7 e os exercícios
-#         têm peso 3. Cada parcial tem peso igual.
-#         Uma forma de resolver é calcular a 1a parcial, com a média ponderada entre
-#         p1 e ep1, depois calcular a 2a parcial, com as notas de p2 e ep2 e depois
-#         calcular a média aritmética entre a 1a e a 2a parcial.
+def media_final_aprovado_reprovado(p1, p2, ep1, ep2):
+    """Recebe as notas das 2 provas e 2 exercícios de programação e retorna
+        se o aluno foi ou não aprovado. As provas têm peso 7 e os exercícios
+        têm peso 3. Cada parcial tem peso igual.
+        Uma forma de resolver é calcular a 1a parcial, com a média ponderada entre
+        p1 e ep1, depois calcular a 2a parcial, com as notas de p2 e ep2 e depois
+        calcular a média aritmética entre a 1a e a 2a parcial.
 
 #     Argumentos:
 #         p1 (float): a nota da primeira prova.
@@ -180,23 +188,31 @@ def celsius_para_fahrenheit(celsius):
 #     Returns:
 #         bool: True ou False, dependendo da média ser maior ou igual a 7 ou não.
 #     """
+    media1 = ((p1 * 7) + (ep1 * 3)) / (7 + 3)
+    media2 = ((p2 * 7) + (ep2 * 3)) / (7 + 3)
+    mediaFinal = (media1 + media2) / 2
+    return mediaFinal >= 7
+    # if mediaFinal < 7:
+    #     return bool(False)
+    # else: return bool(mediaFinal)
 
 
-# def salario(valor_hora, horas_mensais):
-#     """Recebe quanto ganha por hora e quantas horas trabalho ao mês,
-#     e retorna o salário líquido.
 
-#     Descontos:
-#     - INSS é 8% do salário bruto
-#     - IR é 11% do salário bruto
-#     - Sindicato é 5% do salário bruto.
+def salario(valor_hora, horas_mensais):
+    """Recebe quanto ganha por hora e quantas horas trabalho ao mês,
+    e retorna o salário líquido.
 
-#     Argumentos:
-#         valor_hora (float): o valor hora pago ao funcionário.
-#         horas_mensais (float): a quantidade de horas trabalhadas no mes.
+    Descontos:
+    - INSS é 8% do salário bruto
+    - IR é 11% do salário bruto
+    - Sindicato é 5% do salário bruto.
 
-#     Returns:
-#         float: o salário líquido, após todos os descontos.
+    Argumentos:
+        valor_hora (float): o valor hora pago ao funcionário.
+        horas_mensais (float): a quantidade de horas trabalhadas no mes.
+
+    Returns:
+        float: o salário líquido, após todos os descontos.
 #     """
 
 
