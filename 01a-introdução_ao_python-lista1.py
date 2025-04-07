@@ -1,6 +1,6 @@
 # Lista de exercícios 1 - variáveis e operadores
 
-
+import math
 def soma_dois_inteiros(a, b):
     """Recebe dois números inteiros, e retorna a sua soma.
 
@@ -214,47 +214,55 @@ def salario(valor_hora, horas_mensais):
     Returns:
         float: o salário líquido, após todos os descontos.
 #     """
+    ganhos = valor_hora * horas_mensais
+    liquido = ganhos - (ganhos * 8 / 100 + ganhos * 11 /100 + ganhos * 5 /100)
+    return round(liquido,2)
+    # return (valor_hora * horas_mensais) - (valor_hora * horas_mensais * 8 / 100 + valor_hora * horas_mensais * 11 /100 + valor_hora * horas_mensais * 5 /100)
 
+def duzias(ovos):
+    """Receba o número de ovos e devolva a quantidade de dúzias
+        correspondente. Considere sempre dúzias cheias, arredondando pra
+        cima se necessário.
 
-# def duzias(ovos):
-#     """Receba o número de ovos e devolva a quantidade de dúzias
-#         correspondente. Considere sempre dúzias cheias, arredondando pra
-#         cima se necessário.
+    Argumento:
+        ovos (int): a quantidade de ovos.
 
-#     Argumento:
-#         ovos (int): a quantidade de ovos.
+    Retorna:
+        int: a quantidade de dúzias correspondente à quantidade de ovos,
+            arredondado pra cima.
+    """
+    return round(ovos / 12)
 
-#     Retorna:
-#         int: a quantidade de dúzias correspondente à quantidade de ovos,
-#             arredondado pra cima.
-#     """
+def tinta(metros_pintar):
+    """Recebe quantos metros quadrados precisa pintar,
+        e retorna a quantidade de latas de tinta a comprar.
+        A cobertura da tinta é de 3 metros por litro de tinta.
+        Cada lata possui 18 litros de tinta.
 
+    Argumento:
+        metros_pintar (float): a quantidade de metros quadrados a pintar.
 
-# def tinta(metros_pintar):
-#     """Recebe quantos metros quadrados precisa pintar,
-#         e retorna a quantidade de latas de tinta a comprar.
-#         A cobertura da tinta é de 3 metros por litro de tinta.
-#         Cada lata possui 18 litros de tinta.
+    Retorna:
+        int: a quantidade de latas de tinta, arredondado pra cima.
+    """
+    return math.ceil(metros_pintar / 3 / 18)
 
-#     Argumento:
-#         metros_pintar (float): a quantidade de metros quadrados a pintar.
+def decompor_numero(n):
+    """Leia um número inteiro menor que 1000 e devolva a quantidade de
+        centenas, dezenas e unidades do mesmo.
+        Obs.: não utilize operações com strings.
 
-#     Retorna:
-#         int: a quantidade de latas de tinta, arredondado pra cima.
-#     """
+    Argumento:
+        numero (int): um número menor que 1000.
 
-
-# def decompor_numero(n):
-#     """Leia um número inteiro menor que 1000 e devolva a quantidade de
-#         centenas, dezenas e unidades do mesmo.
-#         Obs.: não utilize operações com strings.
-
-#     Argumento:
-#         numero (int): um número menor que 1000.
-
-#     Retorna:
-#         tupla de inteiros, com as centenas, dezenas e unidades do numero.
-#     """
+    Retorna:
+        tupla de inteiros, com as centenas, dezenas e unidades do numero.
+    """
+    if n < 1000 :
+        und = n % 10
+        dez = (n - und) // 10 % 10
+        cent = n // 100
+        return cent , dez, und
 
 
 # Área de testes: só mexa aqui se souber o que está fazendo!
