@@ -3,17 +3,18 @@
 # Não utilize estruturas de decisão (if, elif, else) ou repetição (for e while).
 
 
-def encontra_caracter(texto, caracter_procurado):
-    """Receba um texto e retorne a localização da primeira vez que
-    aparece o caracter especificado.
+# def encontra_caracter(texto, caracter_procurado):
+#     """Receba um texto e retorne a localização da primeira vez que
+#     aparece o caracter especificado.
 
-    Argumentos:
-        texto (string): um texto qualquer.
-        caracter_procurado (string): um caracter.
+#     Argumentos:
+#         texto (string): um texto qualquer.
+#         caracter_procurado (string): um caracter.
 
-    Retorna:
-        int: a posição do caracter procurado no texto.
-    """
+#     Retorna:
+#         int: a posição do caracter procurado no texto.
+#     """
+#     return texto.find(caracter_procurado)
 
 
 def contem(lista, item_procurado):
@@ -28,172 +29,172 @@ def contem(lista, item_procurado):
     """
 
 
-def conta(lista, item_procurado):
-    """Informa quantas ocorrências de um item existem numa lista.
+# def conta(lista, item_procurado):
+#     """Informa quantas ocorrências de um item existem numa lista.
 
-    Argumentos:
-        lista (list): uma lista de elementos de qualquer tipo.
-        item_procurado (qualquer tipo): um item a ser procurado na lista.
+#     Argumentos:
+#         lista (list): uma lista de elementos de qualquer tipo.
+#         item_procurado (qualquer tipo): um item a ser procurado na lista.
 
-    Retorna:
-        int: a quantidade de ocorrências do item procurado na lista.
-    """
-
-
-def é_azarado(numero):
-    """O último dígito não pode ser igual ao primeiro, porque isso dá azar.
-
-    Argumento:
-        numero (string): Um numero, no formato string.
-
-    Retorna:
-        bool: True ou False, baseado no enunciado.
-    """
+#     Retorna:
+#         int: a quantidade de ocorrências do item procurado na lista.
+#     """
 
 
-def ordenamento_contrario(lista):
-    """Inverta a ordem dos elementos da lista.
+# def é_azarado(numero):
+#     """O último dígito não pode ser igual ao primeiro, porque isso dá azar.
 
-    Argumento:
-        lista (list): uma lista de elementos, independente de tipo.
+#     Argumento:
+#         numero (string): Um numero, no formato string.
 
-    Retorna:
-        list: uma lista com os elementos em ordem inversa.
-    """
-
-
-
-def apaga_caracter(texto, n):
-    """
-    Seja uma string texto e um inteiro n,
-    retorna uma nova string sem a posição n.
-
-    Argumento:
-        texto (string): Um texto qualquer.
-
-    Retorna:
-        string: o texto convertido, conforme o enunciado.
-    """
+#     Retorna:
+#         bool: True ou False, baseado no enunciado.
+#     """
 
 
-def maximo(lista):
-    """Retorna o maior elemento da lista.
+# def ordenamento_contrario(lista):
+#     """Inverta a ordem dos elementos da lista.
 
-    Argumento:
-        lista (list): uma lista de elementos float;
+#     Argumento:
+#         lista (list): uma lista de elementos, independente de tipo.
 
-    Retorna:
-        int: o maior elemento da lista.
-    """
-
-
-def minimo(lista):
-    """Retorna o menor elemento da lista.
-
-    Argumento:
-        lista (list): uma lista de elementos float;
-
-    Retorna:
-        int: o menor elemento da lista.
-    """
+#     Retorna:
+#         list: uma lista com os elementos em ordem inversa.
+#     """
 
 
-def maior_menor(lista):
-    """Calcule o maior e o menor número da lista recebida.
 
-    Argumento:
-        lista (list): uma lista de elementos float;
+# def apaga_caracter(texto, n):
+#     """
+#     Seja uma string texto e um inteiro n,
+#     retorna uma nova string sem a posição n.
 
-    Retorna:
-        uma tupla com dois números inteiros, o maior e o menor da lista.
-    """
+#     Argumento:
+#         texto (string): Um texto qualquer.
 
-
-def media_temperaturas(temperaturas):
-    """Retorna a média das temperaturas da lista.
-
-    Argumento:
-        temperaturas (list): uma lista de temperaturas (float).
-
-    Retorna:
-        float: a média das temperaturas.
-    """
+#     Retorna:
+#         string: o texto convertido, conforme o enunciado.
+#     """
 
 
-def media_saltos_lista(saltos):
-    """Receba uma lista com os saltos de um atleta e calcule a média \n
-        dos seus saltos, sabendo que o melhor e o pior saltos são desconsiderados.
+# def maximo(lista):
+#     """Retorna o maior elemento da lista.
 
-    Argumento:
-        saltos (list): uma lista com os saltos (float) de um atleta.
+#     Argumento:
+#         lista (list): uma lista de elementos float;
 
-    Retorna:
-        float: a média dos saltos, de acordo com o enunciado.
-    """
-
-
-def mes_por_extenso(mes):
-    """Receba um número correspondente ao mês e devolva a abreviatura do
-    nome do mês, com 3 letras.
-    Ex.: 1-jan, 2-fev, ..., 12-dez.
-    Use uma lista com os nomes dos meses.
-
-    Argumentos:
-        mes (int): um número inteiro, entre 1 e 12, correspondendo ao mês do ano.
-
-    Retorna:
-        string: a abreviatura do nome do mês, com 3 dígitos.
-    """
+#     Retorna:
+#         int: o maior elemento da lista.
+#     """
 
 
-def data_com_mes_por_extenso(data):
-    """Faça um programa que solicite a data de nascimento (dd/mm/aaaa) \n
-        e imprima com o nome do mês por extenso ("dia 99 de mes de 9999").
+# def minimo(lista):
+#     """Retorna o menor elemento da lista.
 
-    Argumento:
-        data (string): uma data no formato "dd/mm/aaaa".
+#     Argumento:
+#         lista (list): uma lista de elementos float;
 
-    Retorna:
-        string: a data, no formato "99 de mês de 9999".
-    """
-
-
-def palindromo(texto):
-    """Faça uma função que verifique se uma texto é palíndromo,
-        isto é, se é igual quando lido de trás pra frente.
-
-    Argumento:
-        texto (string): Um texto qualquer.
-
-    Retorna:
-        bool: True ou False, dependendo dd texto ser palíndromo ou não.
-    """
+#     Retorna:
+#         int: o menor elemento da lista.
+#     """
 
 
-def troca_caixa(texto):
-    """Vogais ficam em caixa alta (maiúsculas). \n
-        Consoantes ficam em caixa baixa (minúsculas).
+# def maior_menor(lista):
+#     """Calcule o maior e o menor número da lista recebida.
 
-    Argumento:
-        texto (string): Um texto qualquer.
+#     Argumento:
+#         lista (list): uma lista de elementos float;
 
-    Retorna:
-        string: o texto convertido, conforme o enunciado.
-    """
+#     Retorna:
+#         uma tupla com dois números inteiros, o maior e o menor da lista.
+#     """
 
 
-def leet(texto):
-    """
-    Converte texto em leet. Veja os testes para exemplos.
-    Dicionário para usar na conversão:
-        troca = {'a':'4','e':'3','g':'9','i':'1','s':'5','t':'7','o':'0'}
+# def media_temperaturas(temperaturas):
+#     """Retorna a média das temperaturas da lista.
 
-    Argumento:
-        texto (string): Um texto qualquer.
+#     Argumento:
+#         temperaturas (list): uma lista de temperaturas (float).
 
-    Retorna:
-        string: o texto convertido, conforme o enunciado.
-    """
+#     Retorna:
+#         float: a média das temperaturas.
+#     """
+
+
+# def media_saltos_lista(saltos):
+#     """Receba uma lista com os saltos de um atleta e calcule a média \n
+#         dos seus saltos, sabendo que o melhor e o pior saltos são desconsiderados.
+
+#     Argumento:
+#         saltos (list): uma lista com os saltos (float) de um atleta.
+
+#     Retorna:
+#         float: a média dos saltos, de acordo com o enunciado.
+#     """
+
+
+# def mes_por_extenso(mes):
+#     """Receba um número correspondente ao mês e devolva a abreviatura do
+#     nome do mês, com 3 letras.
+#     Ex.: 1-jan, 2-fev, ..., 12-dez.
+#     Use uma lista com os nomes dos meses.
+
+#     Argumentos:
+#         mes (int): um número inteiro, entre 1 e 12, correspondendo ao mês do ano.
+
+#     Retorna:
+#         string: a abreviatura do nome do mês, com 3 dígitos.
+#     """
+
+
+# def data_com_mes_por_extenso(data):
+#     """Faça um programa que solicite a data de nascimento (dd/mm/aaaa) \n
+#         e imprima com o nome do mês por extenso ("dia 99 de mes de 9999").
+
+#     Argumento:
+#         data (string): uma data no formato "dd/mm/aaaa".
+
+#     Retorna:
+#         string: a data, no formato "99 de mês de 9999".
+#     """
+
+
+# def palindromo(texto):
+#     """Faça uma função que verifique se uma texto é palíndromo,
+#         isto é, se é igual quando lido de trás pra frente.
+
+#     Argumento:
+#         texto (string): Um texto qualquer.
+
+#     Retorna:
+#         bool: True ou False, dependendo dd texto ser palíndromo ou não.
+#     """
+
+
+# def troca_caixa(texto):
+#     """Vogais ficam em caixa alta (maiúsculas). \n
+#         Consoantes ficam em caixa baixa (minúsculas).
+
+#     Argumento:
+#         texto (string): Um texto qualquer.
+
+#     Retorna:
+#         string: o texto convertido, conforme o enunciado.
+#     """
+
+
+# def leet(texto):
+#     """
+#     Converte texto em leet. Veja os testes para exemplos.
+#     Dicionário para usar na conversão:
+#         troca = {'a':'4','e':'3','g':'9','i':'1','s':'5','t':'7','o':'0'}
+
+#     Argumento:
+#         texto (string): Um texto qualquer.
+
+#     Retorna:
+#         string: o texto convertido, conforme o enunciado.
+#     """
 
 
 # Área de testes: só mexa aqui se souber o que está fazendo!
